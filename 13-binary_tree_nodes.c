@@ -5,7 +5,7 @@
  * @tree: pointer to root node of tree
  *
  * Return: if tree is NULL - return 0
- *	Else - return node count
+ *  Else - return node count
  */
 
 size_t binary_tree_nodes(const binary_tree_t *tree)
@@ -14,7 +14,9 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 
     if (tree)
     {
-        nodes += (tree->left || tree->right) ? 1 : 0;
+        if (tree->left || tree->right)
+            nodes = 1;
+
         nodes += binary_tree_nodes(tree->left);
         nodes += binary_tree_nodes(tree->right);
     }
