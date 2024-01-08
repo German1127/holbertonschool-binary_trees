@@ -49,7 +49,7 @@ const binary_tree_t *get_leaf(const binary_tree_t *tree)
  */
 
 int is_perfect_recursive(const binary_tree_t *tree,
- 						size_t leaf_depth, size_t level)
+size_t leaf_depth, size_t level)
 {
 	if (is_leaf(tree))
 		return (level == leaf_depth ? 1 : 0);
