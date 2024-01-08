@@ -52,8 +52,8 @@ int right;
 if (!tree)
 return (0);
 
-left = binary_tree_height(tree->left);
-right = binary_tree_height(tree->right);
+left = height(tree->left);
+right = height(tree->right);
 
 if (binary_tree_balance(tree) == 0 && left == right)
 return (1);
